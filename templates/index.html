@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wildlife Alert System | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header style="text-align: center; margin-bottom: 60px;">
+            <h1 class="header-title">🚨 Real Time Animal Detection</h1>
+            <p style="color: var(--text-muted);">MONITORING STATION</p>
+        </header>
+
+        <div class="glass-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <div style="font-size: 4rem; color: var(--accent); margin-bottom: 20px;"></div>
+            <h2>Upload Surveillance Feed</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Processing YOLOv8 Wildlife Model (Tiger, Elephant, Boar)</p>
+
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="video" accept="video/*" required style="margin-bottom: 20px; display: block; width: 100%;">
+                <button type="submit" class="upload-btn">START RISK ANALYSIS</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

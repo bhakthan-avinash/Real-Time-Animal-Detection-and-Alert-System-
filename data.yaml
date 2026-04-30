@@ -1,0 +1,12 @@
+train: data/processed/train/images
+val:  data/processed/valid/images
+
+nc: 3
+names: ['boar', 'elephant', 'tiger']
+
+roboflow:
+  workspace: wildlife-detection-using-yolo
+  project: tiger-elephant-boar-3y72t
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/wildlife-detection-using-yolo/tiger-elephant-boar-3y72t/dataset/1
